@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 element.innerHTML = currentText; // Update text content
                 index++;
-                const speed = Math.random() * (20 - 5) + 5; 
+                const speed = Math.random() * (50 - 10) + 10; 
                 setTimeout(type, speed);
 
                 /* OLD CODE

@@ -1,9 +1,19 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     background-color: black;
-    
+
+    background-image: url("https://irradiated-tarragon-8e0.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7031b9c9-36fd-42a1-b17e-cd3253c5f120%2Ffe0b7464-cecc-4598-bed4-f3accf9d6363%2FAVSDGHWREYT.png?table=block&id=1ff57f7c-a6e8-4da7-9874-cd1ec6f91999&spaceId=7031b9c9-36fd-42a1-b17e-cd3253c5f120&width=2000&userId=&cache=v2");
     *{
         color: white;
+    }
+
+    cursor : cell;
+
+    a:hover{
+        cursor: cell;
+    }
+    p:hover{
+        cursor: cell;
     }
 }
 
@@ -43,10 +53,13 @@ body{
         max-height: 500px;
         overflow: hidden;
         
+        
         text-align: center;
         
         overflow: scroll;
         border-radius: 4px;
+
+        background-color: black;
 
         p{
             font-size: small;
@@ -56,8 +69,12 @@ body{
             position: absolute;
             top: 0;
             left: 0;
-            padding: 10px;
-            margin: 10px;
+            padding: 20px;
+            
+            p{
+                margin-bottom: 100px;
+            }
+            
 
             *:hover{
                 opacity: 1.0;
@@ -77,7 +94,7 @@ body{
 
             width: auto;
             width: auto;
-            padding: 0px;
+            
 
             overflow-x: hidden;
             overflow-y: hidden;
