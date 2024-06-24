@@ -43,22 +43,55 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Flashing Effect (class : 'flash')
 document.addEventListener("DOMContentLoaded", function() {
+    
     function flash(event){
         const element = event.target;
-
-        setTimeout(() => {
-            element.style.visibility = 'hidden';
-        }, 100); 
-
         
-        setTimeout(() => {
-            element.style.visibility = 'visible';
-        }, 300); 
+        const data_original = element.getAttribute("data-original");
+        const data_alternative = element.getAttribute("data-alternative");
+        let flashDuration = 200;
+        
+        if(data_alternative == null){
+            console.log("I let it pass with NO TRANSCRIPTION");
+            setTimeout(() => {
+                element.style.visibility = 'hidden';
+            }, 100); 
+    
+            
+            setTimeout(() => {
+                element.style.visibility = 'visible';
+            }, 300); 
+        }else{
+
+            
+            console.log("I let it pass with the transcription, " + data_alternative);
+            console.log("And with original value , " + data_alternative);
+
+            setTimeout(() => {
+                element.style.visibility = 'hidden';
+            }, flashDuration); 
+            
+            setTimeout(() => {
+                element.style.visibility = 'visible';
+                element.innerHTML = data_alternative;
+            }, flashDuration * 2); 
+            
+            setTimeout(() => {
+                element.style.visibility = 'hidden';
+            }, flashDuration * 3); 
+            
+            setTimeout(() => {
+                element.style.visibility = 'visible';
+                element.innerHTML = data_original;
+            }, flashDuration * 4); 
+        }   
         
     }
 
     document.querySelectorAll('.flash').forEach(element => {
         element.addEventListener('mouseenter', flash);
+        
+        
     });
 });
 
