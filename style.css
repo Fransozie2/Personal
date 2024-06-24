@@ -25,6 +25,23 @@ body{
     top: -100%; /* Start from out of view */
 }
 
+#Greeter{
+    height: 100%;
+    width: 100%;
+
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
+    transition: opacity 0.4s linear;
+}
+
+
 #main-layout{
     display: grid;
     height: 100vh;
@@ -38,6 +55,7 @@ body{
 *::-webkit-scrollbar {
     display: none; /* Hide scrollbar for WebKit browsers */
 }
+
 #ludumcorner-layout{
     display : grid;
     grid-template-columns: 1fr 1fr;
@@ -100,13 +118,14 @@ body{
             overflow-y: hidden;
             border-radius: inherit;
             max-height: 100%;
-            opacity: 0.4;
+            opacity: 0.4;   
+
+            transition: opacity 0.5s ease;
         }
         
     }
 
 }
-
 
 
 #stinger-layout{

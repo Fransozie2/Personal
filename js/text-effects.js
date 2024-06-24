@@ -105,3 +105,23 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// Ludumum Corner Display Background (class : '.ludumum')
+document.addEventListener("DOMContentLoaded", function() {
+    const ludumumElements = document.querySelectorAll('.ludumum');
+
+    ludumumElements.forEach(element => {
+        element.addEventListener('click', function() {
+            const content = this.querySelector('.ludumum-content');
+            const bg = this.querySelector('.ludumum-bg');
+
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                bg.style.opacity = 0.4;
+            } else {
+                content.style.display = 'none';
+                bg.style.opacity = 1;
+            }
+        });
+    });
+});
