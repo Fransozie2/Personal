@@ -170,37 +170,42 @@ body{
     padding: 40px;
 
     *{
-
-        text-align: center;
-    }
-
-    
-    .resume_skill{
-        display: flex;
-        align-items: center;
-        padding-right: 0px;
         text-align: center;
     }
 
     .resume_skills_container {
         margin-left: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        
+        gap: 20px;
+    }
+    
+    .resume_skill{
         display: flex;
-        flex-wrap: wrap;
-        gap: 50px;
+        flex-direction: column;
+
+        row-gap: 0;
+        gap: 0;
+
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img{
+            width: 20%;
+            height: auto;
+        }
+
+        p{
+            max-height: 10%;
+            max-width: 100%;
+            margin: 20px;
+            font-size: x-large;
+        }
     }
-
-    .resume_skill img{
-        width: 10%;
-        height: auto;
-    }
-
-    .resume_skill p{
-        max-width: 100%;
-        margin: 20px;
-        font-size: x-large;
-    }
-
-
 }
 
 .aquaflash:hover{
