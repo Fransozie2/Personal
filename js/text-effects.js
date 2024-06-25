@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         const data_original = element.getAttribute("data-original");
         const data_alternative = element.getAttribute("data-alternative");
-        let flashDuration = 200;
+        let flashDuration = 100;
         
         if(data_alternative == null){
             console.log("I let it pass with NO TRANSCRIPTION");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
             setTimeout(() => {
                 element.style.visibility = 'visible';
-            }, 300); 
+            }, 200); 
         }else{
 
             
@@ -90,8 +90,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelectorAll('.flash').forEach(element => {
         element.addEventListener('mouseenter', flash);
-        
-        
     });
 });
 
